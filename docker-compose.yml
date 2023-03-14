@@ -1,0 +1,11 @@
+version: '3'
+services:
+  glue:
+    image: amazon/aws-glue-libs:glue_libs_3.0.0_image_01
+    environment:
+      - AWS_ACCESS_KEY_ID=<su AWS_ACCESS_KEY_ID>
+      - AWS_SECRET_ACCESS_KEY=<su AWS_SECRET_ACCESS_KEY>
+      - AWS_REGION=<su AWS_REGION>
+    volumes:
+      - ./jobs:/mnt/glue/jobs
+    command: ["/opt/aws-glue-libs/bin/glueetl", "--job-name", "hello-world", "--job-dir", "/mnt/glue/jobs/hello_world"]

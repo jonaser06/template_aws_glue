@@ -1,0 +1,11 @@
+{
+  "job": {
+    "defaultArguments": {
+      "--job-language": "python"
+    },
+    "command": {
+      "Name": "glueetl",
+      "ScriptLocation": "job.py"
+    }
+  }
+}
