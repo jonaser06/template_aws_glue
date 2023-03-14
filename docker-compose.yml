@@ -8,4 +8,3 @@ services:
       - AWS_REGION=<su AWS_REGION>
     volumes:
       - ./jobs:/mnt/glue/jobs
-    command: ["/opt/aws-glue-libs/bin/glueetl", "--job-name", "hello-world", "--job-dir", "/mnt/glue/jobs/hello_world"]
